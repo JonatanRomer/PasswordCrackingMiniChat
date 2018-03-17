@@ -8,7 +8,7 @@ using System.Security.Cryptography;
 
 namespace PasswordCrackerCentralized
 {
-    public class Cracking
+    public class Cracking2
     {
         /// <summary>
         /// The algorithm used for encryption.
@@ -16,7 +16,7 @@ namespace PasswordCrackerCentralized
         /// </summary>
         private readonly HashAlgorithm _messageDigest;
 
-        public Cracking()
+        public Cracking2()
         {
             _messageDigest = new SHA1CryptoServiceProvider();
             //_messageDigest = new MD5CryptoServiceProvider();
@@ -26,7 +26,7 @@ namespace PasswordCrackerCentralized
         /// <summary>
         /// Runs the password cracking algorithm
         /// </summary>
-        public void RunCracking()
+        public void RunCracking2()
         {
             Stopwatch stopwatch = Stopwatch.StartNew();
 
@@ -64,7 +64,7 @@ namespace PasswordCrackerCentralized
         {
             List<UserInfoClearText> result = new List<UserInfoClearText>(); //might be empty
 
-            String possiblePassword = dictionaryEntry;
+            /*String possiblePassword = dictionaryEntry;
             IEnumerable<UserInfoClearText> partialResult = CheckSingleWord(userInfos, possiblePassword);
             result.AddRange(partialResult);
 
@@ -78,31 +78,31 @@ namespace PasswordCrackerCentralized
 
             String possiblePasswordReverse = StringUtilities.Reverse(dictionaryEntry);
             IEnumerable<UserInfoClearText> partialResultReverse = CheckSingleWord(userInfos, possiblePasswordReverse);
-            result.AddRange(partialResultReverse);
+            result.AddRange(partialResultReverse);*/
 
-            /*for (int i = 0; i < 100; i++)
+            for (int i = 99; i < 100; i++)
             {
                 String possiblePasswordEndDigit = dictionaryEntry + i;
                 IEnumerable<UserInfoClearText> partialResultEndDigit = CheckSingleWord(userInfos, possiblePasswordEndDigit);
                 result.AddRange(partialResultEndDigit);
             }
 
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 2; i++)
             {
                 String possiblePasswordStartDigit = i + dictionaryEntry;
                 IEnumerable<UserInfoClearText> partialResultStartDigit = CheckSingleWord(userInfos, possiblePasswordStartDigit);
                 result.AddRange(partialResultStartDigit);
             }
 
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 4; i++)
             {
-                for (int j = 0; j < 10; j++)
+                for (int j = 0; j < 4; j++)
                 {
                     String possiblePasswordStartEndDigit = i + dictionaryEntry + j;
                     IEnumerable<UserInfoClearText> partialResultStartEndDigit = CheckSingleWord(userInfos, possiblePasswordStartEndDigit);
                     result.AddRange(partialResultStartEndDigit);
                 }
-            }*/
+            }
 
             return result;
         }

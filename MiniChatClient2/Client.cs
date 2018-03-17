@@ -43,11 +43,20 @@ namespace MiniChatClient2
                 while (!myLine.Trim().ToLower().Equals("stop"))
                 {
                     // start chat loop
-                    if (line == "Crack")
+                    /*if (line == "Crack")
                     {
                         Cracking cracker = new Cracking();
                         cracker.RunCracking();
 
+                    }
+                    else
+                        myLine = Console.ReadLine().Trim();
+                    sw.WriteLine(myLine);*/
+
+                    if (line == "Crack2")
+                    {
+                        Cracking2 cracker = new Cracking2();
+                        cracker.RunCracking2();
                     }
                     else
                         myLine = Console.ReadLine().Trim();

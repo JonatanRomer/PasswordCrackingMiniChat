@@ -52,6 +52,15 @@ namespace MiniChatClient
                     myLine = Console.ReadLine().Trim();
                     sw.WriteLine(myLine);
 
+                    if (line == "Crack2")
+                    {
+                        Cracking2 cracker = new Cracking2();
+                        cracker.RunCracking2();
+                    }
+                    else
+                        myLine = Console.ReadLine().Trim();
+                    sw.WriteLine(myLine);
+
                     if (myLine.ToLower().Equals("stop"))
                     {
                         line = "stop";
