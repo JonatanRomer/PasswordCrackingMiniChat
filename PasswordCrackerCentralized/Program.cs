@@ -6,8 +6,8 @@ namespace PasswordCrackerCentralized
     {
         static void Main()
         {
-            Cracking cracker = new Cracking();
-            cracker.RunCracking();
+            Cracking3 cracker = new Cracking3();
+            cracker.RunCracking3();
 
             Console.ReadLine();
         }
