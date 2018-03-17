@@ -1,4 +1,6 @@
-﻿namespace PasswordCrackerCentralized
+﻿using System;
+
+namespace PasswordCrackerCentralized
 {
     class Program
     {
@@ -6,6 +8,8 @@
         {
             Cracking cracker = new Cracking();
             cracker.RunCracking();
+
+            Console.ReadLine();
         }
     }
 }

@@ -31,8 +31,8 @@ namespace EchoClient
 
                 // three different clients - run only one of them
 
-                Client1(sr, sw);        // read 1 line from console and send to server
-                //Client2(sr, sw);      // read 5 lines and send to server
+                //Client1(sr, sw);        // read 1 line from console and send to server
+                Client2(sr, sw);      // read 5 lines and send to server
                 //Client3(sr, sw);      // send 100 messages to server
 
                 Console.WriteLine("Client finished");
